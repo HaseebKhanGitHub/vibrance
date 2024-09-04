@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:vibrance/Views/Auth/loginScreen.dart';
 
+import 'Views/Auth/forgotPasswordScreen.dart';
+import 'Views/Auth/signUpScreen.dart';
+
 void main() {
   runApp(const vibrance());
 }
@@ -12,6 +15,8 @@ class vibrance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Vibrance', debugShowCheckedModeBanner: false, home: login());
+        title: 'Vibrance',
+        debugShowCheckedModeBanner: false,
+        home: forgotPassword());
   }
 }
