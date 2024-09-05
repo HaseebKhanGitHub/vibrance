@@ -19,53 +19,55 @@ class forgotPassword extends StatelessWidget {
         backgroundColor: Colors.black,
         centerTitle: true,
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 40),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            authHeading(text1: 'Forgot your Password?', text2: ''),
-            Container(
-                width: 150,
-                height: 150,
-                child: Image.asset('assets/images/forgot.png')),
-            SizedBox(
-              height: 30,
-            ),
-            Text(
-              'To request a new one, type your email below. A link to reset the password will be sent to that email',
-              style: TextStyle(color: Colors.black),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            authTextField(
-                keyboardType: TextInputType.emailAddress,
-                HintText: 'Email',
-                ObsecureText: false,
-                icondata: Icons.email_outlined,
-                iconsize: 20),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              width: 500,
-              child: RoundedLoadingButton(
-                  width: 2000,
-                  controller: _forgotController,
-                  borderRadius: 10,
-                  onPressed: () {
-                    print('ok');
-                  },
-                  child: Text(
-                    'Send',
-                    style: TextStyle(color: Colors.white),
-                  )),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 30,
+              ),
+              authHeading(text1: 'Forgot your Password?', text2: ''),
+              Container(
+                  width: 150,
+                  height: 150,
+                  child: Image.asset('assets/images/forgot.png')),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                'To request a new one, type your email below. A link to reset the password will be sent to that email',
+                style: TextStyle(color: Colors.black),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              authTextField(
+                  keyboardType: TextInputType.emailAddress,
+                  HintText: 'Email',
+                  ObsecureText: false,
+                  icondata: Icons.email_outlined,
+                  iconsize: 20),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: 500,
+                child: RoundedLoadingButton(
+                    width: 2000,
+                    controller: _forgotController,
+                    borderRadius: 10,
+                    onPressed: () {
+                      print('ok');
+                    },
+                    child: Text(
+                      'Send',
+                      style: TextStyle(color: Colors.white),
+                    )),
+              ),
+            ],
+          ),
         ),
       ),
     );
