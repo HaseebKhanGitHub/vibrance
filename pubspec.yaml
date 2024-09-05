@@ -33,6 +33,7 @@ dependencies:
 
   google_fonts:
   rounded_loading_button_plus:
+  circular_profile_avatar:
 
 
   # The following adds the Cupertino Icons font to your application.
