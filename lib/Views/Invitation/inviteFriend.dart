@@ -106,7 +106,11 @@ class inviteFriend extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          SizedBox(
+            width: 20,
+          ),
+          Image.asset('assets/images/notification.png')
         ],
       ),
     );
