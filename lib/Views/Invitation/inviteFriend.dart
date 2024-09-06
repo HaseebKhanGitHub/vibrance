@@ -8,7 +8,7 @@ class inviteFriend extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // bgcolor: Colors.white,
+      backgroundColor: Colors.white,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(60),
           child: AppBar(
@@ -109,13 +109,46 @@ class inviteFriend extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 60,
+            height: 15,
           ),
           Container(
               width: 400,
-              height: 400,
-              child: Image.asset("assets/images/notitfication.jpg")),
-
+              height: 300,
+              child: Image.asset(
+                "assets/images/notitfication.jpg",
+                filterQuality: FilterQuality.high,
+                fit: BoxFit.cover,
+              )),
+          SizedBox(
+            height: 40,
+          ),
+          Text(
+            'Search for your friends on Vibrance or\n invite your friend to Vibrance',
+            style: GoogleFonts.nunito(
+                color: Colors.grey.shade500,
+                fontWeight: FontWeight.bold,
+                fontSize: 16),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              // Button action
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.purple,
+              shape: RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(20), // Set the rounded corners here
+              ),
+            ),
+            child: Text(
+              'Invite a Friend',
+              style: TextStyle(color: Colors.white),
+            ),
+          )
         ],
       ),
     );
