@@ -8,6 +8,7 @@ class inviteFriend extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     // bgcolor: Colors.white,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(60),
           child: AppBar(
@@ -108,9 +109,13 @@ class inviteFriend extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 20,
+            width: 60,
           ),
-          Image.asset('assets/images/notification.png')
+          Container(
+              width: 400,
+              height: 400,
+              child: Image.asset("assets/images/notitfication.jpg")),
+
         ],
       ),
     );
