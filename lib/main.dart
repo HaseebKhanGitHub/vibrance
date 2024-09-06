@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vibrance/Views/Auth/loginScreen.dart';
+import 'package:vibrance/Views/Invitation/acceptInvite.dart';
 import 'package:vibrance/Views/Invitation/inviteFriend.dart';
 import 'package:vibrance/Views/Profile/profileSetup.dart';
 
@@ -19,6 +20,6 @@ class vibrance extends StatelessWidget {
     return MaterialApp(
         title: 'Vibrance',
         debugShowCheckedModeBanner: false,
-        home: inviteFriend());
+        home: acceptInvite());
   }
 }
