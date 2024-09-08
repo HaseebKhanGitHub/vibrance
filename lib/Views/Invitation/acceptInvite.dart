@@ -32,14 +32,6 @@ class acceptInvite extends StatelessWidget {
                 size: 35,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Icon(
-                Icons.person,
-                color: Colors.purple,
-                size: 35,
-              ),
-            ),
           ],
         ),
       ),
