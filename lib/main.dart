@@ -20,6 +20,6 @@ class vibrance extends StatelessWidget {
     return MaterialApp(
         title: 'Vibrance',
         debugShowCheckedModeBanner: false,
-        home: acceptInvite());
+        home: profileSetup());
   }
 }
