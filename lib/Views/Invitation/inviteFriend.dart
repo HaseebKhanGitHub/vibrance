@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/components/button/gf_button.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vibrance/Views/Widgets/Auth/authTextField.dart';
 
@@ -112,10 +114,93 @@ class inviteFriend extends StatelessWidget {
             height: 15,
           ),
           Container(
-              width: double.infinity,
+            width: double.infinity,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
               child: Card(
-                elevation: 19.0,
-              )),
+                elevation: 10.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(20),
+                  ),
+                ),
+                color: Colors.white,
+                child: Container(
+                  height: 100,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(10, 20, 5, 15),
+                            child: CircleAvatar(
+                              backgroundColor: Colors.purple,
+                              radius: 30,
+                            ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    bottom: 5, left: 10),
+                                child: Text(
+                                  '@Haseeb5741',
+                                  style: TextStyle(fontSize: 17),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 14),
+                                child: Text(
+                                  'Haseeb',
+                                  style: TextStyle(
+                                      color: Colors.grey, fontSize: 13),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 5),
+                                  child: GFButton(
+                                    onPressed: () {},
+                                    color: Colors.cyan,
+                                    shape: GFButtonShape.pills,
+                                    child: Text(
+                                      'Accept',
+                                      style: TextStyle(fontSize: 10),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 5),
+                                  child: GFButton(
+                                    onPressed: () {},
+                                    color: Colors.red.shade500,
+                                    shape: GFButtonShape.pills,
+                                    child: Text(
+                                      'Decline',
+                                      style: TextStyle(fontSize: 10),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             height: 15,
           ),
