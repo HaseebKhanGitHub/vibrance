@@ -112,6 +112,14 @@ class inviteFriend extends StatelessWidget {
             height: 15,
           ),
           Container(
+              width: double.infinity,
+              child: Card(
+                elevation: 19.0,
+              )),
+          SizedBox(
+            height: 15,
+          ),
+          Container(
               width: 400,
               height: 300,
               child: Image.asset(
