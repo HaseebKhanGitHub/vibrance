@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vibrance/Views/Invitation/acceptInvite.dart';
 import 'package:vibrance/Views/Widgets/Auth/authTextField.dart';
 
 class inviteFriend extends StatelessWidget {
@@ -27,11 +30,21 @@ class inviteFriend extends StatelessWidget {
             leading: null,
             actions: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Icon(
-                  Icons.person,
-                  color: Colors.purple,
-                  size: 35,
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                child: GestureDetector(
+                  onTap: () {
+                    Timer(Duration(seconds: 3), () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => acceptInvite()));
+                    });
+                  },
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.purple,
+                    size: 35,
+                  ),
                 ),
               )
             ],
