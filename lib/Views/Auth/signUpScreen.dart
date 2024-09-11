@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
+import 'package:vibrance/Views/Auth/loginScreen.dart';
 
 import '../Widgets/Auth/authHeading.dart';
 import '../Widgets/Auth/authTextField.dart';
@@ -16,7 +17,7 @@ class signUp extends StatelessWidget {
         title: Text('Vibrance',
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold, color: Colors.white)),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.orangeAccent,
         centerTitle: true,
       ),
       body: Padding(
@@ -103,12 +104,18 @@ class signUp extends StatelessWidget {
                     "Already have an account?",
                     style: TextStyle(color: Colors.black, fontSize: 12),
                   ),
-                  Text(
-                    " Sign In",
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => login()));
+                    },
+                    child: Text(
+                      " Sign In",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14),
+                    ),
                   ),
                 ],
               )
