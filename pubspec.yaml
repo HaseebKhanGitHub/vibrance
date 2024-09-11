@@ -31,10 +31,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  google_fonts:
-  rounded_loading_button_plus:
-  circular_profile_avatar:
-  getwidget:
+  google_fonts: ^6.2.1
+  rounded_loading_button_plus: ^3.0.1
+  circular_profile_avatar: ^2.0.5
+  getwidget: ^4.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
