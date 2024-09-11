@@ -124,6 +124,5 @@ class signUp extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
