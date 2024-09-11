@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
+import 'package:vibrance/Views/Auth/signUpScreen.dart';
 import 'package:vibrance/Views/Widgets/Auth/authHeading.dart';
 import 'package:vibrance/Views/Widgets/Auth/authTextField.dart';
 
@@ -88,12 +89,18 @@ class login extends StatelessWidget {
                     "Don't have an account?",
                     style: TextStyle(color: Colors.black, fontSize: 12),
                   ),
-                  Text(
-                    " Sign Up",
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => signUp()));
+                    },
+                    child: Text(
+                      " Sign Up",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14),
+                    ),
                   ),
                 ],
               )

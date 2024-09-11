@@ -18,8 +18,6 @@ class vibrance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Vibrance',
-        debugShowCheckedModeBanner: false,
-        home: inviteFriend());
+        title: 'Vibrance', debugShowCheckedModeBanner: false, home: login());
   }
 }
