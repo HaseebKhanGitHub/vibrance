@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
+import 'package:vibrance/Views/Invitation/inviteFriend.dart';
 import 'package:vibrance/Views/Widgets/Auth/authTextField.dart';
 
 class profileSetup extends StatefulWidget {
@@ -149,19 +152,25 @@ class _profileSetupState extends State<profileSetup> {
               height: 30,
             ),
             Container(
-              width: 250,
-              child: RoundedLoadingButton(
+                width: 250,
+                child: RoundedLoadingButton(
                   width: 2000,
                   controller: profileController,
                   borderRadius: 10,
                   onPressed: () {
-                    print('ok');
+                    Timer(Duration(seconds: 3), () {
+                      profileController.success();
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => inviteFriend()));
+                    });
                   },
                   child: Text(
                     'Send',
                     style: TextStyle(color: Colors.white),
-                  )),
-            ),
+                  ),
+                )),
           ],
         ),
       ),
