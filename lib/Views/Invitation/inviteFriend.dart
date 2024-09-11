@@ -126,7 +126,8 @@ class inviteFriend extends StatelessWidget {
           SizedBox(
             height: 15,
           ),
-          Container(
+          //-----------------------------------------------------
+          /*Container(
             width: double.infinity,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -213,7 +214,7 @@ class inviteFriend extends StatelessWidget {
                 ),
               ),
             ),
-          ),
+          ),*/
           SizedBox(
             height: 15,
           ),
