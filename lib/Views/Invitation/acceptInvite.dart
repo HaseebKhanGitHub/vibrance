@@ -19,9 +19,14 @@ class acceptInvite extends StatelessWidget {
               filterQuality: FilterQuality.high,
             ),
           ),
-          leading: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
           ),
           actions: [
             Padding(
