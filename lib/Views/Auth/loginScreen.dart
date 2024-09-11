@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rounded_loading_button_plus/rounded_loading_button.dart';
+import 'package:vibrance/Views/Auth/forgotPasswordScreen.dart';
 import 'package:vibrance/Views/Auth/signUpScreen.dart';
+import 'package:vibrance/Views/Profile/profileSetup.dart';
 import 'package:vibrance/Views/Widgets/Auth/authHeading.dart';
 import 'package:vibrance/Views/Widgets/Auth/authTextField.dart';
 
 class login extends StatelessWidget {
-  final RoundedLoadingButtonController _buttonController =
+  final RoundedLoadingButtonController _loginbuttonController =
       RoundedLoadingButtonController();
 
   @override
@@ -17,7 +20,7 @@ class login extends StatelessWidget {
         title: Text('Vibrance',
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold, color: Colors.white)),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.orangeAccent,
         centerTitle: true,
       ),
       body: Padding(
@@ -59,10 +62,16 @@ class login extends StatelessWidget {
                 width: 500,
                 child: RoundedLoadingButton(
                     width: 2000,
-                    controller: _buttonController,
+                    controller: _loginbuttonController,
                     borderRadius: 10,
                     onPressed: () {
-                      print('ok');
+                      Timer(Duration(seconds: 3), () {
+                        _loginbuttonController.success();
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => profileSetup()));
+                      });
                     },
                     child: Text(
                       'Login',
@@ -74,9 +83,17 @@ class login extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  'Forgot Password?',
-                  style: TextStyle(color: Colors.black, fontSize: 12),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => forgotPassword()));
+                  },
+                  child: Text(
+                    'Forgot Password?',
+                    style: TextStyle(color: Colors.black, fontSize: 12),
+                  ),
                 ),
               ),
               SizedBox(
