@@ -16,7 +16,7 @@ class forgotPassword extends StatelessWidget {
         title: Text('Vibrance',
             style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold, color: Colors.white)),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.orangeAccent,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
