@@ -23,9 +23,9 @@ class login extends StatelessWidget {
         backgroundColor: Colors.orangeAccent,
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(40, 20, 40, 40),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(40, 20, 40, 40),
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             //crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,7 +59,7 @@ class login extends StatelessWidget {
                 height: 30,
               ),
               Container(
-                width: 500,
+                width: 400,
                 child: RoundedLoadingButton(
                     width: 2000,
                     controller: _loginbuttonController,
