@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:vibrance/Views/Auth/loginScreen.dart';
 import 'package:vibrance/Views/Invitation/acceptInvite.dart';
 import 'package:vibrance/Views/Invitation/inviteFriend.dart';
@@ -17,7 +18,11 @@ class vibrance extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Vibrance', debugShowCheckedModeBanner: false, home: login());
+    return ResponsiveSizer(builder: (BuildContext, Orientation, ScreenType) {
+      return MaterialApp(
+          title: 'Vibrance',
+          debugShowCheckedModeBanner: false,
+          home: signUp());
+    });
   }
 }
