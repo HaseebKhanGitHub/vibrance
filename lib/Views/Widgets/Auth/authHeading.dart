@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class authHeading extends StatelessWidget {
   final String text1;
@@ -20,7 +21,7 @@ class authHeading extends StatelessWidget {
           children: [
             Text(text1,
                 style: GoogleFonts.poppins(
-                    fontSize: 18,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.black)),
             Container(
@@ -33,7 +34,7 @@ class authHeading extends StatelessWidget {
         ),
         Text(text2,
             style: GoogleFonts.poppins(
-                fontSize: 18,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.bold,
                 color: Colors.black)),
       ],
