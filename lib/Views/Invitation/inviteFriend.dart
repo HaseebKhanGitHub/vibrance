@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:vibrance/Views/Invitation/acceptInvite.dart';
 import 'package:vibrance/Views/Widgets/Auth/authTextField.dart';
 
@@ -62,7 +63,7 @@ class inviteFriend extends StatelessWidget {
               'Find Your Friend',
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w700,
-                  fontSize: 18,
+                  fontSize: 18.sp,
                   color: Colors.black,
                   letterSpacing: 2),
             ),

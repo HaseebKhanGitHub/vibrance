@@ -22,7 +22,7 @@ class vibrance extends StatelessWidget {
       return MaterialApp(
           title: 'Vibrance',
           debugShowCheckedModeBanner: false,
-          home: signUp());
+          home: inviteFriend());
     });
   }
 }
