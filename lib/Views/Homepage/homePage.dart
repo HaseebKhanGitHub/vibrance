@@ -19,7 +19,11 @@ class _homepageState extends State<homepage> {
   Widget pageViewSection() {
     return PageView(
       controller: pageController,
-      onPageChanged: (value) {},
+      onPageChanged: (value) {
+        setState(() {
+          page = value;
+        });
+      },
       children: [
         Container(
           color: Colors.red,
@@ -28,7 +32,7 @@ class _homepageState extends State<homepage> {
           color: Colors.green,
         ),
         Container(
-          color: Colors.blue,
+          color: Colors.cyanAccent,
         ),
       ],
     );
@@ -71,7 +75,7 @@ class _homepageState extends State<homepage> {
       bottomNavigationBar: AnimatedBottomNavigationBar(
         icons: iconList,
         activeIndex: page,
-        activeColor: Colors.purple,
+        activeColor: Colors.blue,
         inactiveColor: Colors.black,
         notchSmoothness: NotchSmoothness.softEdge,
         splashSpeedInMilliseconds: 300,
