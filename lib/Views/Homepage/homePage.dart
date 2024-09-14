@@ -2,10 +2,37 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/drawer/gf_drawer.dart';
 
-class homepage extends StatelessWidget {
+class homepage extends StatefulWidget {
+  @override
+  State<homepage> createState() => _homepageState();
+}
+
+class _homepageState extends State<homepage> {
   final GlobalKey<ScaffoldState> _homepageKey = GlobalKey();
+
   List<IconData> iconList = [Icons.person, Icons.house, Icons.notifications];
-  int page = 0;
+
+  int page = 1;
+  int pageView = 1;
+  PageController pageController = PageController(initialPage: 1);
+
+  Widget pageViewSection() {
+    return PageView(
+      controller: pageController,
+      onPageChanged: (value) {},
+      children: [
+        Container(
+          color: Colors.red,
+        ),
+        Container(
+          color: Colors.green,
+        ),
+        Container(
+          color: Colors.blue,
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,8 +74,19 @@ class homepage extends StatelessWidget {
         activeColor: Colors.purple,
         inactiveColor: Colors.black,
         notchSmoothness: NotchSmoothness.softEdge,
-        onTap: (p0) {},
+        splashSpeedInMilliseconds: 300,
+        leftCornerRadius: 22,
+        rightCornerRadius: 22,
+        gapLocation: GapLocation.none,
+        onTap: (p0) {
+          setState(() {
+            pageView = p0;
+            pageController.animateToPage(p0,
+                duration: Duration(microseconds: 150), curve: Curves.linear);
+          });
+        },
       ),
+      body: pageViewSection(),
     );
   }
 }
