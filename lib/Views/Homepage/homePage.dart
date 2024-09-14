@@ -1,11 +1,15 @@
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/components/drawer/gf_drawer.dart';
 
 class homepage extends StatelessWidget {
-  const homepage({super.key});
+  final GlobalKey<ScaffoldState> _homepageKey = GlobalKey();
+  List<IconData> icons = [];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _homepageKey,
       appBar: AppBar(
         elevation: 0,
         title: Container(
@@ -16,6 +20,30 @@ class homepage extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
         centerTitle: true,
+        leading: GestureDetector(
+            onTap: () {
+              _homepageKey.currentState!.openDrawer();
+            },
+            child: Icon(
+              Icons.menu,
+              color: Colors.white,
+            )),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(
+              'assets/images/message.png',
+              width: 35,
+              height: 35,
+            ),
+          )
+        ],
+      ),
+      drawer: GFDrawer(),
+      bottomNavigationBar: AnimatedBottomNavigationBar(
+        icons: [],
+        activeIndex: activeIndex,
+        onTap: (p0) {},
       ),
     );
   }
