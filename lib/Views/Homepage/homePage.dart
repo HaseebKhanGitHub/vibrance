@@ -1,10 +1,15 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:getwidget/components/drawer/gf_drawer.dart';
 
 class homepage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _homepageKey = GlobalKey();
-  List<IconData> icons = [];
+  List<IconData> icons = [
+    FontAwesomeIcons.circleUser,
+    FontAwesomeIcons.house,
+    FontAwesomeIcons.bell
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +46,8 @@ class homepage extends StatelessWidget {
       ),
       drawer: GFDrawer(),
       bottomNavigationBar: AnimatedBottomNavigationBar(
-        icons: [],
-        activeIndex: activeIndex,
+        icons: icons,
+        activeIndex: 0,
         onTap: (p0) {},
       ),
     );
