@@ -68,10 +68,19 @@ class _homepageState extends State<homepage> {
               width: 35,
               height: 35,
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(
+              'assets/images/message.png',
+              width: 35,
+              height: 35,
+            ),
           )
         ],
       ),
       drawer: GFDrawer(),
+      //mood ha ni
       bottomNavigationBar: AnimatedBottomNavigationBar(
         icons: iconList,
         activeIndex: page,
