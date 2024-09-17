@@ -76,36 +76,97 @@ class _homepageState extends State<homepage> {
         child: Column(
           children: [
             Expanded(
-                flex: 0,
-                child: Column(
+              flex: 0,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                          child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 25, horizontal: 25),
+                        child: CircularProfileAvatar(
+                          "",
+                          backgroundColor: Colors.cyan,
+                          borderWidth: 1,
+                          borderColor: Colors.purpleAccent,
+                          elevation: 20,
+                          radius: 40,
+                          cacheImage: true,
+                          errorWidget: (context, url, error) {
+                            return Icon(
+                              Icons.face,
+                              size: 50,
+                            );
+                          },
+                          onTap: () {
+                            pageController.animateToPage(0,
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.linear);
+                            Navigator.of(context).pop();
+                          },
+                          animateFromOldImageOnUrlChange: true,
+                          placeHolder: (context, url) {
+                            return Container(
+                                child: Center(
+                                    child: CircularProgressIndicator()));
+                          },
+                        ),
+                      )),
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Haseeb Khan',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  letterSpacing: 1),
+                            ),
+                            Text(
+                              'hk@gmail.com',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.cyan,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 0,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Row(
-                      children: [
-                        Container(
-                            child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 25, horizontal: 25),
-                          child: CircularProfileAvatar(
-                            "",
-                            backgroundColor: Colors.cyan,
-                            borderWidth: 1,
-                            borderColor: Colors.purpleAccent,
-                            elevation: 20,
-                            radius: 40,
-                            cacheImage: true,
-                            errorWidget: (context, url, error) {
-                              return Icon(
-                                Icons.face,
-                                size: 50,
-                              );
-                            },
-                          ),
-                        ))
-                      ],
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      decoration: BoxDecoration(
+                        color: Colors.purpleAccent,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(50),
+                        ),
+                      ),
+                      child: Text(
+                        'Premium',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
                     )
                   ],
-                )),
-            Expanded(child: Container()),
+                ),
+              ),
+            ),
             Expanded(child: Container()),
           ],
         ),
