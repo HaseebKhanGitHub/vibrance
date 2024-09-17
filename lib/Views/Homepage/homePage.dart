@@ -1,4 +1,5 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/drawer/gf_drawer.dart';
 
@@ -69,17 +70,46 @@ class _homepageState extends State<homepage> {
               height: 35,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset(
-              'assets/images/message.png',
-              width: 35,
-              height: 35,
-            ),
-          )
         ],
       ),
-      drawer: GFDrawer(),
+      drawer: GFDrawer(
+        child: Column(
+          children: [
+            Expanded(
+                flex: 0,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                            child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 25, horizontal: 25),
+                          child: CircularProfileAvatar(
+                            "",
+                            backgroundColor: Colors.cyan,
+                            borderWidth: 1,
+                            borderColor: Colors.purpleAccent,
+                            elevation: 20,
+                            radius: 40,
+                            cacheImage: true,
+                            errorWidget: (context, url, error) {
+                              return Icon(
+                                Icons.face,
+                                size: 50,
+                              );
+                            },
+                          ),
+                        ))
+                      ],
+                    )
+                  ],
+                )),
+            Expanded(child: Container()),
+            Expanded(child: Container()),
+          ],
+        ),
+      ),
       //mood ha ni
       bottomNavigationBar: AnimatedBottomNavigationBar(
         icons: iconList,
