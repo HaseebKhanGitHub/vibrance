@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/drawer/gf_drawer.dart';
+import 'package:vibrance/Views/Widgets/Homepage/drawerListTile.dart';
 
 class homepage extends StatefulWidget {
   @override
@@ -170,40 +171,12 @@ class _homepageState extends State<homepage> {
             Expanded(flex: 0, child: Divider()),
             Column(
               children: [
-                GestureDetector(
-                  onTap: () {},
-                  child: ListTile(
-                    title: Container(
-                      alignment: Alignment.center,
-                      height: 50,
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 10),
-                            child: Icon(
-                              Icons.credit_card,
-                              color: Colors.cyan,
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 10),
-                            child: Text(
-                              'Subscription',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 15,
-                                  letterSpacing: 1,
-                                  color: Color(0xff2a3d66)),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                )
+                drawerlisttile(Icons.credit_card, "Subscription"),
+                drawerlisttile(Icons.settings, "Settings"),
+                drawerlisttile(Icons.help, "Help"),
+                drawerlisttile(Icons.feedback, "Feedback"),
+                drawerlisttile(Icons.people, "Tell Others"),
+                drawerlisttile(Icons.star_half, "Rate the App"),
               ],
             )
           ],
