@@ -167,7 +167,45 @@ class _homepageState extends State<homepage> {
                 ),
               ),
             ),
-            Expanded(child: Container()),
+            Expanded(flex: 0, child: Divider()),
+            Column(
+              children: [
+                GestureDetector(
+                  onTap: () {},
+                  child: ListTile(
+                    title: Container(
+                      alignment: Alignment.center,
+                      height: 50,
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 10),
+                            child: Icon(
+                              Icons.credit_card,
+                              color: Colors.cyan,
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 10),
+                            child: Text(
+                              'Subscription',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15,
+                                  letterSpacing: 1,
+                                  color: Color(0xff2a3d66)),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
