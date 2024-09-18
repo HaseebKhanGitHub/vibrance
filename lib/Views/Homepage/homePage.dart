@@ -168,6 +168,9 @@ class _homepageState extends State<homepage> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Expanded(flex: 0, child: Divider()),
             Column(
               children: [
