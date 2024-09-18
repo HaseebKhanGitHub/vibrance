@@ -178,7 +178,15 @@ class _homepageState extends State<homepage> {
                 drawerlisttile(Icons.people, "Tell Others"),
                 drawerlisttile(Icons.star_half, "Rate the App"),
               ],
-            )
+            ),
+            Expanded(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Divider(),
+                drawerlisttile(Icons.logout, "Sign Out"),
+              ],
+            ))
           ],
         ),
       ),
