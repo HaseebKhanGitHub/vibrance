@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/drawer/gf_drawer.dart';
+import 'package:vibrance/Views/Homepage/dashBoard.dart';
 import 'package:vibrance/Views/Widgets/Homepage/drawerListTile.dart';
 
 class homepage extends StatefulWidget {
@@ -30,9 +31,7 @@ class _homepageState extends State<homepage> {
         Container(
           color: Colors.red,
         ),
-        Container(
-          color: Colors.green,
-        ),
+        dashBoard(),
         Container(
           color: Colors.cyanAccent,
         ),
