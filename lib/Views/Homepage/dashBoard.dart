@@ -1,3 +1,4 @@
+import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 
 class dashBoard extends StatelessWidget {
@@ -47,7 +48,76 @@ class dashBoard extends StatelessWidget {
               child: Column(
                 children: [
                   Row(
-                    children: [Container(), Container()],
+                    children: [
+                      Container(
+                        child: CircularProfileAvatar(
+                          "",
+                          backgroundColor: Colors.cyan,
+                          borderWidth: 1,
+                          borderColor: Colors.purpleAccent,
+                          elevation: 20,
+                          radius: 40,
+                          cacheImage: true,
+                          errorWidget: (context, url, error) {
+                            return Icon(
+                              Icons.face,
+                              size: 50,
+                            );
+                          },
+                          onTap: () {},
+                          animateFromOldImageOnUrlChange: true,
+                          placeHolder: (context, url) {
+                            return Container(
+                                child: Center(
+                                    child: CircularProgressIndicator()));
+                          },
+                        ),
+                      ),
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(width: 15),
+                                Icon(
+                                  Icons.fiber_manual_record_rounded,
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(width: 8),
+                                Text(
+                                  'Rahim Perdesi',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.purple,
+                                      fontWeight: FontWeight.w800,
+                                      letterSpacing: 1),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(width: 15),
+                                Icon(
+                                  Icons.location_on,
+                                  color: Colors.blue,
+                                  size: 27,
+                                ),
+                                SizedBox(width: 8),
+                                Text(
+                                  'Rahim Perdesi',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.purple,
+                                      fontWeight: FontWeight.w800,
+                                      letterSpacing: 1),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
