@@ -118,6 +118,52 @@ class dashBoard extends StatelessWidget {
                         ),
                       )
                     ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 60),
+                      Flexible(
+                        child: Column(
+                          children: [
+                            Text(
+                              'Status',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Text(
+                              'Offline',
+                              style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.redAccent,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 15),
+                      SizedBox(
+                        height: 30,
+                        width: 2,
+                        child: Container(
+                          color: Colors.deepPurple,
+                        ),
+                      ),
+                      Flexible(
+                        child: Column(
+                          children: [],
+                        ),
+                      ),
+                      Flexible(
+                        child: Column(
+                          children: [],
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
