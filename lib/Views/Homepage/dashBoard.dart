@@ -105,9 +105,9 @@ class dashBoard extends StatelessWidget {
                                 ),
                                 SizedBox(width: 8),
                                 Text(
-                                  'Rahim Perdesi',
+                                  'Bilal Street, Sui gas road,\nGujranwala',
                                   style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       color: Colors.purple,
                                       fontWeight: FontWeight.w800,
                                       letterSpacing: 1),
