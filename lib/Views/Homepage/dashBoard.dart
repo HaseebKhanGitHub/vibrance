@@ -153,11 +153,12 @@ class dashBoard extends StatelessWidget {
                           color: Colors.deepPurple,
                         ),
                       ),
+                      SizedBox(width: 15),
                       Flexible(
                         child: Column(
                           children: [
                             Text(
-                              'Status',
+                              'User Status',
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
@@ -165,7 +166,7 @@ class dashBoard extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              'Offline',
+                              'NA',
                               style: TextStyle(
                                 fontSize: 17,
                                 color: Colors.redAccent,
@@ -183,11 +184,22 @@ class dashBoard extends StatelessWidget {
                           color: Colors.deepPurple,
                         ),
                       ),
+                      SizedBox(width: 15),
                       Flexible(
                         child: Column(
-                          children: [],
+                          children: [
+                            Text(
+                              'Mood NA',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
                         ),
-                      )
+                      ),
+                      SizedBox(width: 15),
                     ],
                   )
                 ],
