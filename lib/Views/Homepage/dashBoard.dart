@@ -200,6 +200,23 @@ class dashBoard extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 15),
+
+                      //==========================================================
+
+                      Flexible(
+                        child: Column(
+                          children: [
+                            Text(
+                              'Mood NA',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   )
                 ],
