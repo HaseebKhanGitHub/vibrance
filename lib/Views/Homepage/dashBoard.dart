@@ -1,5 +1,6 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:vibrance/Views/Homepage/Dashboard/dashboard_gradient_feature.dart';
 
 class dashBoard extends StatelessWidget {
   const dashBoard({super.key});
@@ -207,47 +208,65 @@ class dashBoard extends StatelessWidget {
             ),
           ),
         ),
-        dashboard_gradient_feature()
-      ],
-    );
-  }
-
-  Container dashboard_gradient_feature() {
-    return Container(
-      alignment: Alignment.center,
-      height: 50,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(15),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey,
-            offset: Offset(0.0, 3.0),
-            blurRadius: 3.0,
-          )
-        ],
-        gradient: LinearGradient(
-          colors: [Color(0xff4FC174), Color(0xff00D7A9)],
-        ),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        Row(
           children: [
-            Icon(Icons.phone_android),
             Flexible(
-                child: Text(
-              'Device Info',
-              style: TextStyle(
-                fontWeight: FontWeight.w300,
-              ),
-            ))
+              child: dashboard_gradient_feature(
+                  Icons.phone_android,
+                  'Device Info',
+                  [Color(0xff4FC174), Color(0xff00D7A9)],
+                  Colors.white),
+            ),
+            Flexible(
+              child: dashboard_gradient_feature(Icons.image, 'Gallery',
+                  [Color(0xffefd216), Color(0xfffa9442)], Colors.white),
+            ),
+            Flexible(
+              child: dashboard_gradient_feature(Icons.emoji_emotions, 'Mood',
+                  [Color(0xe5d66fee), Color(0xffa00cc2)], Colors.white),
+            ),
           ],
         ),
-      ),
+        SizedBox(height: 10),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          child: Container(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Our Features',
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                  letterSpacing: 1,
+                  color: Colors.blue.shade900,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900),
+            ),
+          ),
+        ),
+        SizedBox(height: 10),
+        Row(
+          children: [
+            Flexible(
+              child: dashboard_gradient_feature(
+                Icons.,
+                'Mood',
+                [Colors.white, Colors.white],
+                Colors.purple,
+                fweight: FontWeight.w900,
+              ),
+            ),
+            Flexible(
+              child: dashboard_gradient_feature(
+                Icons.emoji_emotions,
+                'Mood',
+                [Colors.white, Colors.white],
+                Colors.black,
+                fweight: FontWeight.w900,
+              ),
+            )
+          ],
+        )
+      ],
     );
   }
 }
