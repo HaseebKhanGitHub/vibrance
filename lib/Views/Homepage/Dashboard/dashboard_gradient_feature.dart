@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 
 class dashboard_gradient_feature extends StatelessWidget {
   final IconData icon;
-  final String text;
+  final Color iconColor;
+  final String btntext;
   final List<Color> clr;
+  final FontWeight? fweight;
 
-  dashboard_gradient_feature(this.icon, this.text, this.clr);
+  dashboard_gradient_feature(
+      this.icon, this.btntext, this.clr, this.iconColor,
+      {this.fweight});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +17,7 @@ class dashboard_gradient_feature extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
         alignment: Alignment.center,
-        height: 50,
+        height: 60,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(
@@ -27,7 +31,7 @@ class dashboard_gradient_feature extends StatelessWidget {
             )
           ],
           gradient: LinearGradient(
-            colors: [Color(0xff4FC174), Color(0xff00D7A9)],
+            colors: clr,
           ),
         ),
         child: Padding(
@@ -35,12 +39,15 @@ class dashboard_gradient_feature extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(icon),
+              Icon(
+                icon,
+                color: iconColor,
+              ),
               Flexible(
                   child: Text(
-                'Device Info',
+                btntext,
                 style: TextStyle(
-                  fontWeight: FontWeight.w300,
+                  fontWeight: fweight ?? FontWeight.w300,
                 ),
               ))
             ],
