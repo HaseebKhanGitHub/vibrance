@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class dashboard_gradient_feature extends StatelessWidget {
   final IconData icon;
+  final double? iconsize;
   final Color iconColor;
   final String btntext;
   final List<Color> clr;
@@ -9,7 +10,7 @@ class dashboard_gradient_feature extends StatelessWidget {
 
   dashboard_gradient_feature(
       this.icon, this.btntext, this.clr, this.iconColor,
-      {this.fweight});
+      {this.fweight, this.iconsize});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class dashboard_gradient_feature extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
         alignment: Alignment.center,
-        height: 60,
+        height: 55,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(
@@ -42,6 +43,7 @@ class dashboard_gradient_feature extends StatelessWidget {
               Icon(
                 icon,
                 color: iconColor,
+                size: iconsize ?? 28.0,
               ),
               Flexible(
                   child: Text(
