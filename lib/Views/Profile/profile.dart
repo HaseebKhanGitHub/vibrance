@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({super.key});
-
+class profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
