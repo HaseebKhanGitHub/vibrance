@@ -3,6 +3,7 @@ import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/drawer/gf_drawer.dart';
 import 'package:vibrance/Views/Homepage/dashBoard.dart';
+import 'package:vibrance/Views/Profile/profile.dart';
 import 'package:vibrance/Views/Widgets/Homepage/drawerListTile.dart';
 
 class homepage extends StatefulWidget {
@@ -17,7 +18,7 @@ class _homepageState extends State<homepage> {
 
   int page = 1;
   int pageView = 1;
-  PageController pageController = PageController(initialPage: 1);
+  PageController pageController = PageController(initialPage: 0);
 
   Widget pageViewSection() {
     return PageView(
@@ -28,9 +29,7 @@ class _homepageState extends State<homepage> {
         });
       },
       children: [
-        Container(
-          color: Colors.red,
-        ),
+        profile(),
         dashBoard(),
         Container(
           color: Colors.cyanAccent,
