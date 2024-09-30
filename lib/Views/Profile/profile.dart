@@ -106,6 +106,22 @@ class cardDetailRow extends StatelessWidget {
               Text(
                 type,
                 textScaler: TextScaler.linear(1.2),
+              ),
+              Flexible(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      val,
+                      textAlign: TextAlign.right,
+                      style: TextStyle(
+                          color: val == "Not Currently set"
+                              ? Colors.red
+                              : Colors.black),
+                    ),
+                  ),
+                ),
               )
             ],
           ),
