@@ -1,7 +1,14 @@
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 
-class profile extends StatelessWidget {
+class profile extends StatefulWidget {
+  @override
+  State<profile> createState() => _profileState();
+}
+
+class _profileState extends State<profile> {
+  bool more = false;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -87,15 +94,46 @@ class profile extends StatelessWidget {
                     "United States", Colors.grey.shade200),
                 cardDetailRow(" Phone Number", Icons.phone,
                     "Not Currently Set", Colors.grey.shade200),
-                cardDetailRow(
-                    " Gender", Icons.people, "Male", Colors.grey.shade200),
-                cardDetailRow(" Partner", Icons.person, "Robbie Williamss",
-                    Colors.grey.shade200),
-                cardDetailRow(" UID", Icons.fingerprint, "HUE83VFNU73BF65",
-                    Colors.grey.shade200),
-                cardDetailRow(" Account Created", Icons.timer_outlined,
-                    "22-09-2024", Colors.grey.shade200),
+                more
+                    ? cardDetailRow(
+                        " Gender", Icons.people, "Male", Colors.grey.shade200)
+                    : Container(),
+                more
+                    ? cardDetailRow(" Partner", Icons.person,
+                        "Robbie Williamss", Colors.grey.shade200)
+                    : Container(),
+                more
+                    ? cardDetailRow(" UID", Icons.fingerprint,
+                        "HUE83VFNU73BF65", Colors.grey.shade200)
+                    : Container(),
+                more
+                    ? cardDetailRow(" Account Created", Icons.timer_outlined,
+                        "22-09-2024", Colors.grey.shade200)
+                    : Container(),
               ],
+            ),
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                more = !more;
+              });
+              // Button action
+            },
+            style: ElevatedButton.styleFrom(
+              side: BorderSide(color: Colors.grey.shade200),
+              shape: RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.circular(20), // Set the rounded corners here
+              ),
+            ),
+            child: Text(
+              more ? "- Show Less" : "+ Show More",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600),
             ),
           ),
         ],
