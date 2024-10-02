@@ -136,8 +136,59 @@ class _profileState extends State<profile> {
                   fontWeight: FontWeight.w600),
             ),
           ),
+          SizedBox(height: 15),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: 170,
+                width: 170,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [Color(0xffff9966), Color(0xffff5e62)]),
+                    borderRadius: BorderRadius.circular(50)),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        "Subscribed to",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                      Text(
+                        "Premium",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w900,
+                            fontSize: 20),
+                      ),
+                    ]),
+              ),
+              Container(
+                height: 170,
+                width: 170,
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(50)),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        "Subscribed on",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                      Text(
+                        "N/A",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w900,
+                            fontSize: 20),
+                      ),
+                    ]),
+              )
+            ],
+          )
         ],
-      ),
+      ), //main col ===========================================================
     );
   }
 }
