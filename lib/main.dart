@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:vibrance/Views/Auth/loginScreen.dart';
+import 'package:vibrance/Views/Features/DeviceInfo/deviceInfo.dart';
 import 'package:vibrance/Views/Homepage/homePage.dart';
 import 'package:vibrance/Views/Invitation/acceptInvite.dart';
 import 'package:vibrance/Views/Invitation/inviteFriend.dart';
+import 'package:vibrance/Views/Profile/profileSettings.dart';
 import 'package:vibrance/Views/Profile/profileSetup.dart';
 
 import 'Views/Auth/forgotPasswordScreen.dart';
@@ -23,7 +25,7 @@ class vibrance extends StatelessWidget {
       return MaterialApp(
           title: 'Vibrance',
           debugShowCheckedModeBanner: false,
-          home: homepage());
+          home: deviceInfo());
     });
   }
 }
