@@ -23,12 +23,13 @@ class twoValueCard extends StatelessWidget {
       child: Card(
         elevation: 10,
         color: clr ?? Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               text,
-              style: TextStyle(fontWeight: FontWeight.w500),
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 5),
@@ -38,7 +39,7 @@ class twoValueCard extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: textclr ?? Color(0xff23a8e1),
-                      fontSize: 18,
+                      fontSize: 15,
                       fontWeight: FontWeight.w900),
                 )
           ],
