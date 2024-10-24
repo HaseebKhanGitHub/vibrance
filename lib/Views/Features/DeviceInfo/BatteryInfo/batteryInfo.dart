@@ -288,7 +288,7 @@ class batteryInfo extends StatelessWidget {
                                     child: twoValueCard(
                                       text: "Battery Technology",
                                       value: "Li-Poly",
-                                      clr: Colors.redAccent.shade100,
+                                      clr: Colors.redAccent,
                                       textclr: Colors.white,
                                     ),
                                   ),
