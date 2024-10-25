@@ -5,6 +5,7 @@ import 'package:vibrance/Views/Features/DeviceInfo/BatteryInfo/batteryInfo.dart'
 import 'package:vibrance/Views/Features/DeviceInfo/GeneralInfo/generalInfo.dart';
 import 'package:vibrance/Views/Features/DeviceInfo/UserStatus/userStatus.dart';
 import 'package:vibrance/Views/Features/DeviceInfo/deviceInfo.dart';
+import 'package:vibrance/Views/Features/LocationInfo/locationInfo.dart';
 import 'package:vibrance/Views/Homepage/homePage.dart';
 import 'package:vibrance/Views/Invitation/acceptInvite.dart';
 import 'package:vibrance/Views/Invitation/inviteFriend.dart';
@@ -28,7 +29,7 @@ class vibrance extends StatelessWidget {
       return MaterialApp(
           title: 'Vibrance',
           debugShowCheckedModeBanner: false,
-          home: generalInfo());
+          home: locationInfo());
     });
   }
 }
