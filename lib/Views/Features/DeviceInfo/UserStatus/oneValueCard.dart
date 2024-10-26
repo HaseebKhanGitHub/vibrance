@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class oneValueCard extends StatelessWidget {
   final String value;
   final Color clr;
+  final Color? textColor;
   final double? hightt;
 
-  oneValueCard({required this.value, required this.clr, this.hightt});
+  oneValueCard(
+      {required this.value, required this.clr, this.hightt, this.textColor});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class oneValueCard extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                       letterSpacing: 1,
                       fontSize: 15,
-                      color: Colors.white),
+                      color: textColor ?? Colors.grey),
                 ),
               ))
             ],
