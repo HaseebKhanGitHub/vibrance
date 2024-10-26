@@ -100,7 +100,8 @@ class locationInfo extends StatelessWidget {
                     SizedBox(height: 20),
                     oneValueCard(
                       value: 'United States',
-                      clr: Colors.purple,
+                      clr: Colors.white,
+                      textColor: Colors.purple,
                       hightt: 80,
                     ),
                     SizedBox(height: 10),
@@ -113,7 +114,83 @@ class locationInfo extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(child: Container())
+            Expanded(
+                child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    topLeft: Radius.circular(20),
+                  )),
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'My Location Info',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w800,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Card(
+                      elevation: 10,
+                      color: Colors.purple,
+                      child: Container(
+                        width: double.infinity,
+                        height: 130,
+                        child: Center(
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 30),
+                                child: Icon(
+                                  Icons.pin_drop,
+                                  color: Colors.white,
+                                  size: 50,
+                                ),
+                              ),
+                              Flexible(
+                                child: Container(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 10),
+                                  child: Text(
+                                    "North Loop,West Freeway, Houstan, Texas",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 20,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  oneValueCard(
+                    value: 'United States',
+                    clr: Colors.purple,
+                    textColor: Colors.white,
+                    hightt: 80,
+                  ),
+                ],
+              ),
+            ))
           ], // main col ========================================================
         ),
       ),
