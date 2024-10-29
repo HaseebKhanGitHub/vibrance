@@ -1,5 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:vibrance/Views/Features/Album/my_album.dart';
 import 'package:vibrance/Views/Homepage/dashBoard.dart';
 import 'package:vibrance/Views/Profile/profile.dart';
 
@@ -31,9 +32,7 @@ class _album_mainState extends State<album_main>
         });
       },
       children: [
-        Container(
-          color: Colors.red,
-        ),
+        my_album(),
         Container(
           color: Colors.blue,
         ),

@@ -7,7 +7,6 @@ import 'package:vibrance/Views/Features/DeviceInfo/DeviceSpecs/deviceSpecs.dart'
 import 'package:vibrance/Views/Features/DeviceInfo/GeneralInfo/generalInfo.dart';
 import 'package:vibrance/Views/Features/DeviceInfo/UserStatus/userStatus.dart';
 import 'package:vibrance/Views/Features/DeviceInfo/deviceInfo.dart';
-
 import 'package:vibrance/Views/Homepage/homePage.dart';
 import 'package:vibrance/Views/Invitation/acceptInvite.dart';
 import 'package:vibrance/Views/Invitation/inviteFriend.dart';
