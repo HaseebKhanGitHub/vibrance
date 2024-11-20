@@ -2,6 +2,8 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:focused_menu/focused_menu.dart';
+import 'package:focused_menu/modals.dart';
 
 class my_album extends StatelessWidget {
   const my_album({super.key});
@@ -21,7 +23,60 @@ class my_album extends StatelessWidget {
               crossAxisCount: 4,
               itemCount: 6,
               itemBuilder: (context, index) {
-                return Container(color: Colors.red);
+                return FocusedMenuHolder(
+                    menuWidth: MediaQuery.of(context).size.width * 0.50,
+                    blurSize: 5.0,
+                    menuItemExtent: 45,
+                    menuBoxDecoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius:
+                            BorderRadius.all(Radius.circular(15.0))),
+                    duration: Duration(milliseconds: 100),
+                    animateMenuItems: true,
+                    blurBackgroundColor: Colors.black54,
+                    openWithTap: true,
+                    // Open Focused-Menu on Tap rather than Long Press
+                    menuOffset: 10.0,
+                    // Offset value to show menuItem from the selected item
+                    bottomOffsetHeight: 80.0,
+                    // Offset height to consider, for showing the menu item ( for example bottom navigation bar), so that the popup menu will be shown on top of selected item.
+                    menuItems: <FocusedMenuItem>[
+                      // Add Each FocusedMenuItem  for Menu Options
+                      FocusedMenuItem(
+                          title: Text("Open"),
+                          trailingIcon: Icon(Icons.open_in_new),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ScreenTwo()));
+                          }),
+                      FocusedMenuItem(
+                          title: Text("Share"),
+                          trailingIcon: Icon(Icons.share),
+                          onPressed: () {}),
+                      FocusedMenuItem(
+                          title: Text("Favorite"),
+                          trailingIcon: Icon(Icons.favorite_border),
+                          onPressed: () {}),
+                      FocusedMenuItem(
+                          title: Text(
+                            "Delete",
+                            style: TextStyle(color: Colors.redAccent),
+                          ),
+                          trailingIcon: Icon(
+                            Icons.delete,
+                            color: Colors.redAccent,
+                          ),
+                          onPressed: () {}),
+                    ],
+                    onPressed: () {},
+                    child: Card(
+                        child: Column(
+                      children: <Widget>[
+                        Image.asset("assets/images/image_$e.jpg"),
+                      ],
+                    )));
               },
               staggeredTileBuilder: (index) =>
                   new StaggeredTile.count(2, index.isEven ? 2 : 3),
