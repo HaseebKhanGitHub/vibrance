@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:focused_menu/focused_menu.dart';
 import 'package:focused_menu/modals.dart';
+import 'package:vibrance/Views/Features/DeviceInfo/GeneralInfo/generalInfo.dart';
 
 class my_album extends StatelessWidget {
   const my_album({super.key});
@@ -49,7 +50,7 @@ class my_album extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ScreenTwo()));
+                                    builder: (context) => generalInfo()));
                           }),
                       FocusedMenuItem(
                           title: Text("Share"),
@@ -74,7 +75,7 @@ class my_album extends StatelessWidget {
                     child: Card(
                         child: Column(
                       children: <Widget>[
-                        Image.asset("assets/images/image_$e.jpg"),
+                        Image.asset("assets/images/emptyimg.jpg"),
                       ],
                     )));
               },
