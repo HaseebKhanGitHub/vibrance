@@ -6,6 +6,8 @@ import 'package:focused_menu/focused_menu.dart';
 import 'package:focused_menu/modals.dart';
 import 'package:vibrance/Views/Features/DeviceInfo/GeneralInfo/generalInfo.dart';
 
+import '../../Widgets/Features/Album/gallery_header.dart';
+
 class my_album extends StatelessWidget {
   const my_album({super.key});
 
@@ -75,7 +77,9 @@ class my_album extends StatelessWidget {
                     child: Card(
                         child: Column(
                       children: <Widget>[
-                        Image.asset("assets/images/emptyimg.jpg"),
+                        Image.asset(
+                          "assets/images/doodle.jpg",
+                        ),
                       ],
                     )));
               },
@@ -91,7 +95,7 @@ class my_album extends StatelessWidget {
   }
 }
 
-class GalleryHeader extends StatelessWidget {
+/*class GalleryHeader extends StatelessWidget {
   final BuildContext context;
   final String tuVal;
   final String toVal;
@@ -270,4 +274,4 @@ class GalleryHeader extends StatelessWidget {
       ),
     );
   }
-}
+}*/ //gallaery header moved to widget class
