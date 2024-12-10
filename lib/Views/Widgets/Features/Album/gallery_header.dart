@@ -87,7 +87,9 @@ class GalleryHeader extends StatelessWidget {
                 Text(
                   description,
                   style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w400),
+                      fontSize: 10,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400),
                 ),
               ],
             ),
