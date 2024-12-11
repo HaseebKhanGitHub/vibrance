@@ -33,7 +33,7 @@ class vibrance extends StatelessWidget {
       return MaterialApp(
           title: 'Vibrance',
           debugShowCheckedModeBanner: false,
-          home: newPost());
+          home: album_main());
     });
   }
 }
