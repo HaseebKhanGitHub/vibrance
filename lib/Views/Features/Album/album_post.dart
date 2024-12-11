@@ -8,6 +8,8 @@ import 'dart:ui' as prefix0;
 
 import 'package:getwidget/components/avatar/gf_avatar.dart';
 import 'package:list_tile_more_customizable/list_tile_more_customizable.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:vibrance/Views/Features/Album/imageView.dart';
 
 class albumPost extends StatefulWidget {
   @override
@@ -49,7 +51,9 @@ class _albumPostState extends State<albumPost> {
                               Padding(
                                 padding: const EdgeInsets.all(10.0),
                                 child: IconButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
                                     icon: Icon(
                                       Icons.arrow_back,
                                       color: Colors.orange,
@@ -73,12 +77,23 @@ class _albumPostState extends State<albumPost> {
                           SizedBox(height: 30),
                           Padding(
                             padding: const EdgeInsets.all(20.0),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                'assets/images/techimg.jpg',
-                                fit: BoxFit.cover,
+                            child: GestureDetector(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  'assets/images/techimg.jpg',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    PageTransition(
+                                        child: imageView(
+                                            url:
+                                                "https://collectionperformance.com/wp-content/uploads/2024/02/Capture-decran-2024-02-08-154311-min.jpg"),
+                                        type: PageTransitionType.fade));
+                              },
                             ),
                           ),
                           SizedBox(height: 30),
